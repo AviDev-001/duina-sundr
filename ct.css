@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+.message{
+    max-width:700px;
+    margin:80px auto;
+    padding:40px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+.message h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#222;
+}
+
+.ct-links{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.ct-links a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    height:80px;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:18px;
+    box-shadow:
+        0 10px 20px rgba(37,117,252,.35),
+        inset 0 1px 1px rgba(255,255,255,.3);
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.ct-links a::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
+}
+
+.ct-links a:hover::before{
+    left:100%;
+}
+
+.ct-links a:hover{
+    transform:translateY(-8px) scale(1.05);
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+    box-shadow:0 18px 35px rgba(221,36,118,.45);
+}
+
+.ct-links a:active{
+    transform:scale(.96);
+}
